@@ -1,0 +1,46 @@
+.animated-border-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 1rem;
+}
+
+.animated-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  background: conic-gradient(
+    #ff0080,
+    #7928ca,
+    #007cf0,
+    #00dfd8,
+    #ff0080
+  );
+  animation: spin 2.5s linear infinite;
+  filter: blur(1px) brightness(1.1);
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  object-fit: cover;
+  border: 6px solid #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

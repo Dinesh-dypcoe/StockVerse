@@ -1,0 +1,237 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+.nav-link.active {
+  color: #1976d2 !important;
+  font-weight: 600;
+  position: relative;
+  background: linear-gradient(90deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  height: 3px;
+  background: #1976d2;
+  border-radius: 2px;
+  margin-top: 2px;
+  transition: width 0.3s;
+}
+
+.nav-link:hover {
+  background: #e3f2fd;
+  color: #1976d2 !important;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-link{
+  text-decoration: none;
+}
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+
+#supportHero a{
+  color: white;
+}
+
+#supportWrapper{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+}
+
+#supportHero input{
+  margin-bottom: 1rem;
+  padding: 1rem 2.2rem;
+  width: 85%;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  border: none;
+}
+
+/* login and signup styling */
+.form_container {
+  background: #fff;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 410px;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  color: #222;
+  position: relative;
+  border: 1px solid #e3e8ee;
+}
+
+.form_container > h2 {
+  margin-block: 1rem;
+  padding-block: 0.6rem;
+  color: #1a237e;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.form_container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form_container label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #3a3a3a;
+  margin-bottom: 0.2rem;
+}
+
+.form_container input {
+  border: 1px solid #bfc9d9;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  outline: none;
+  background: #f7f9fb;
+  color: #222;
+  transition: border 0.2s, background 0.2s;
+}
+
+.form_container input:focus {
+  background: #fff;
+  border: 1.5px solid #1976d2;
+}
+
+.form_container input::placeholder {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #bfc9d9;
+}
+
+.form_container button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.form_container button:hover {
+  background: #1565c0;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.form_container span {
+  text-align: center;
+  margin-top: 0.7rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.form_container span a {
+  text-decoration: underline;
+  color: #1976d2;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.form_container span a:hover {
+  color: #1565c0;
+}
+
+@media (max-width: 500px) {
+  .form_container {
+    padding: 1.5rem 0.7rem 1rem 0.7rem;
+    max-width: 98vw;
+  }
+}
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
