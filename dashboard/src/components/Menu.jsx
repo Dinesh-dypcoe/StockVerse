@@ -265,4 +265,6 @@ const Menu = () => {
   );
 };
 
+//removed the vercel files
+
 export default Menu;
